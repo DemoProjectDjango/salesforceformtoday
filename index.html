@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salesforce Form Today - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #00A1E0; /* Salesforce Blue-ish */
+            --secondary-color: #f4f6f9;
+            --text-dark: #2c3e50;
+        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: var(--text-dark); }
+        .navbar { box-shadow: 0 2px 10px rgba(0,0,0,0.1); background: #fff; }
+        .navbar-brand img { height: 40px; margin-right: 10px; }
+        .hero-section { background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 80px 0; }
+        .feature-card { border: none; transition: transform 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.05); height: 100%; }
+        .feature-card:hover { transform: translateY(-5px); }
+        .icon-box { font-size: 2rem; color: var(--primary-color); margin-bottom: 15px; }
+        .negative-list li { color: #dc3545; margin-bottom: 8px; }
+        .negative-list li i { margin-right: 10px; }
+        .check-list li { color: #198754; margin-bottom: 8px; }
+        .check-list li i { margin-right: 10px; }
+        footer { background: #343a40; color: #fff; padding: 40px 0; }
+        footer a { color: #adb5bd; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="https://res.cloudinary.com/du42kbmmn/image/upload/v1767709840/Untitled_design_9_rydgdm.png" alt="Logo">
+                <span class="fw-bold">Salesforce Form Today</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="privacy.html">Privacy Policy</a></li>
+                    <li class="nav-item"><a class="nav-link" href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section mt-5">
+        <div class="container text-center" data-aos="fade-up">
+            <h1 class="display-4 fw-bold mb-4">Connect Google Forms to Salesforce</h1>
+            <p class="lead mb-4">Collect data via Google Forms and store it directly in Salesforce without manual data entry.</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#purpose" class="btn btn-primary btn-lg">Learn More</a>
+                <a href="privacy.html" class="btn btn-outline-dark btn-lg">Privacy Policy</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="purpose" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="fw-bold">Purpose of the Application</h2>
+                <p class="text-muted">Designed for organizations managing form-based data intake.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card feature-card p-4 text-center">
+                        <i class="fas fa-building icon-box"></i>
+                        <h5>Business Operations</h5>
+                        <p>Streamline internal data collection and operational workflows.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card feature-card p-4 text-center">
+                        <i class="fas fa-hand-holding-heart icon-box"></i>
+                        <h5>Non-Profits & Volunteers</h5>
+                        <p>Manage volunteer registrations and non-profit data collection efficiently.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card feature-card p-4 text-center">
+                        <i class="fas fa-poll-h icon-box"></i>
+                        <h5>Surveys & Leads</h5>
+                        <p>Automate lead creation and feedback intake from surveys.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h3><i class="fab fa-google text-danger me-2"></i> Why Google APIs?</h3>
+                    <p>We use Google APIs strictly to facilitate the connection between your Forms and Salesforce.</p>
+                    <ul class="list-unstyled check-list">
+                        <li><i class="fas fa-check-circle"></i> Authenticate via OAuth 2.0</li>
+                        <li><i class="fas fa-check-circle"></i> List Forms owned by you</li>
+                        <li><i class="fas fa-check-circle"></i> Read form structure & questions</li>
+                        <li><i class="fas fa-check-circle"></i> Retrieve responses securely</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="card p-4 border-0 shadow-sm">
+                        <h4>OAuth Scopes Justification</h4>
+                        <p>Requested scopes are <strong>minimal and strictly necessary</strong>:</p>
+                        <ul>
+                            <li><strong>Google Forms:</strong> Read access to fetch questions and answers.</li>
+                            <li><strong>Google Drive:</strong> Limited access strictly to locate your Forms files.</li>
+                        </ul>
+                        <small class="text-muted">Scopes are used only after explicit consent during active sync.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6" data-aos="fade-up">
+                    <h3 class="mb-3">No Sensitive or Restricted Usage</h3>
+                    <ul class="list-unstyled negative-list lead">
+                        <li><i class="fas fa-times-circle"></i> Does NOT read Gmail</li>
+                        <li><i class="fas fa-times-circle"></i> Does NOT send emails</li>
+                        <li><i class="fas fa-times-circle"></i> Does NOT show ads</li>
+                        <li><i class="fas fa-times-circle"></i> Does NOT track users</li>
+                        <li><i class="fas fa-times-circle"></i> Does NOT sell or share data</li>
+                    </ul>
+                </div>
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="mb-3">User Control</h3>
+                    <div class="alert alert-info">
+                        <i class="fas fa-user-shield me-2"></i> <strong>User-Initiated Action Only</strong>
+                        <p class="mb-0 mt-2">All API calls are triggered by manual user interactions inside Salesforce. There are <strong>no background or silent data pulls</strong>.</p>
+                    </div>
+                    <p class="mt-3"><strong>Target Users:</strong> Salesforce Administrators, Business Users, and Organizations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2026 Salesforce Form Today. All Rights Reserved.</p>
+            <p>
+                <a href="privacy.html" class="me-3">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </p>
+            <p class="small text-muted">Contact: saiful.lightcode@gmail.com</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
