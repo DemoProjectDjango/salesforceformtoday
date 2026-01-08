@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salesforce Form Today - Home</title>
+    <title>Form Today - Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -18,8 +18,16 @@
         
         /* Navbar Styling */
         .navbar { box-shadow: 0 2px 10px rgba(0,0,0,0.1); background: #fff; }
-        .navbar-brand img { height: 90px; margin-right: 10px; } 
+        .navbar-brand img { height: 60px; margin-right: 5px; } /* Adjusted height for balance */
         
+        /* Gradient Text for 'Today' */
+        .brand-text { font-size: 1.75rem; font-weight: 800; letter-spacing: -0.5px; }
+        .text-gradient {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 50%, #43e97b 100%); /* Light Blue to Green */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
         /* Hero Section */
         .hero-section { background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 80px 0; }
         
@@ -56,7 +64,10 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="https://res.cloudinary.com/du42kbmmn/image/upload/v1767709840/Untitled_design_9_rydgdm.png" alt="Logo">
+                <img src="https://res.cloudinary.com/du42kbmmn/image/upload/v1767880777/Form_Today_3_xrkl4l.png" alt="Form Today Logo">
+                <span class="brand-text">
+                    <span class="text-dark">Form</span> <span class="text-gradient">Today</span>
+                </span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -64,8 +75,8 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://salesforceformtoday.twinstack.net/privacy">Privacy Policy</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://salesforceformtoday.twinstack.net/terms">Terms of Service</a></li>
+                    <li class="nav-item"><a class="nav-link" href="privacy.html">Privacy Policy</a></li>
+                    <li class="nav-item"><a class="nav-link" href="terms.html">Terms of Service</a></li>
                 </ul>
             </div>
         </div>
@@ -73,11 +84,11 @@
 
     <section class="hero-section mt-5">
         <div class="container text-center" data-aos="fade-up">
-            <h1 class="display-4 fw-bold mb-4">Salesforce Form Today</h1>
-            <p class="lead mb-4">Connect Google Forms to Salesforce</p>
+            <h1 class="display-4 fw-bold mb-4">Form Today</h1>
+            <p class="lead mb-4">Seamlessly transfer Google Forms data into Salesforce</p>
             <div class="d-flex justify-content-center gap-3">
                 <a href="#section1" class="btn btn-primary btn-lg">Learn More</a>
-                <a href="https://salesforceformtoday.twinstack.net/privacy" class="btn btn-outline-dark btn-lg">Privacy Policy</a>
+                <a href="privacy.html" class="btn btn-outline-dark btn-lg">Privacy Policy</a>
             </div>
         </div>
     </section>
@@ -85,88 +96,77 @@
     <section id="section1" class="content-section">
         <div class="container" data-aos="fade-up">
             <h2 class="section-title">1. App Purpose</h2>
-            <p class="lead">Salesforce Form Today is designed to help organizations efficiently transfer data collected through Google Forms into Salesforce without manual data entry.</p>
-            <p>Many organizations use Google Forms to collect structured information such as registrations, surveys, feedback, applications, or internal requests. Salesforce Form Today provides a secure and controlled way to synchronize this data into Salesforce where it can be managed, reported on, and acted upon.</p>
             <div class="highlight-box">
-                <h5 class="fw-bold">Primary Purpose</h5>
-                <p>The primary purpose of the application is to enable Salesforce users to:</p>
-                <ul class="custom-list list-check">
-                    <li>Connect a Google account through OAuth 2.0 authentication</li>
-                    <li>Select Google Forms that they own or manage</li>
-                    <li>Read the structure and questions of those forms</li>
-                    <li>Retrieve form responses submitted by respondents</li>
-                    <li>Insert or update corresponding records inside Salesforce based on user-defined mappings</li>
-                </ul>
+                <p class="lead mb-0">Form Today is designed to help organizations seamlessly transfer data collected through Google Forms into Salesforce, eliminating the need for manual data entry.</p>
             </div>
-            <p>The application operates entirely under user control. All Google data access is explicitly initiated by the user from within Salesforce and occurs only after the user grants consent.</p>
+            <p>The application enables Salesforce users to:</p>
+            <ul class="custom-list list-check">
+                <li>Connect a Google account using OAuth 2.0 authentication</li>
+                <li>Select and view Google Forms owned or managed by the user</li>
+                <li>Retrieve form responses and data</li>
+                <li>Insert or update corresponding Salesforce records based on user-defined mappings</li>
+            </ul>
         </div>
     </section>
 
     <section class="content-section bg-light">
         <div class="container" data-aos="fade-up">
             <h2 class="section-title">2. Purpose of Google API Access</h2>
-            <p>Salesforce Form Today requires access to Google APIs solely to support its core synchronization functionality.</p>
-            <p>Google APIs are used only to:</p>
+            <p>Form Today requires Google API access to:</p>
             <ul class="custom-list list-arrow">
                 <li>Identify Google Forms owned by the authenticated user</li>
-                <li>Read form metadata such as form name, questions, and field types</li>
-                <li>Retrieve responses submitted to selected forms</li>
+                <li>Retrieve metadata about forms (e.g., questions and field types)</li>
+                <li>Access form responses to sync into Salesforce</li>
             </ul>
-            <div class="alert alert-info">
-                <strong>Note:</strong> No Google APIs are used for unrelated purposes.
+            <div class="alert alert-info mt-3">
+                <strong>Note:</strong> No additional Google services such as Gmail, Calendar, or Contacts are accessed by the app.
             </div>
-            <p>The application does not request access to Gmail, Google Contacts, Google Calendar, Google Photos, or any other Google services outside of Google Forms and limited Google Drive access required to locate forms.</p>
         </div>
     </section>
 
     <section class="content-section">
         <div class="container" data-aos="fade-up">
             <h2 class="section-title">3. What This App Does</h2>
-            <p>Salesforce Form Today enables Salesforce users to:</p>
+            <p>Form Today lets Salesforce users:</p>
             <div class="row">
                 <div class="col-md-6">
                     <ul class="custom-list list-check">
-                        <li>Connect a Google account using OAuth 2.0 authentication</li>
-                        <li>View and select Google Forms owned by the authenticated user</li>
-                        <li>Read Google Form structure and questions</li>
-                        <li>Map Google Form questions to Salesforce object fields</li>
+                        <li>Connect their Google account via OAuth 2.0</li>
+                        <li>View and select Google Forms they own or manage</li>
+                        <li>Select Google Forms for data syncing</li>
                     </ul>
                 </div>
                 <div class="col-md-6">
                     <ul class="custom-list list-check">
-                        <li>Synchronize Google Form responses into Salesforce records</li>
-                        <li>Manually control when synchronization runs from Salesforce</li>
+                        <li>Map Google Form questions to Salesforce fields</li>
+                        <li>Sync form responses into Salesforce records</li>
+                        <li>Initiate data synchronization when required</li>
                     </ul>
                 </div>
             </div>
-            <p class="mt-3 fw-bold">All actions are initiated by the user from inside Salesforce.</p>
         </div>
     </section>
 
     <section class="content-section bg-light">
         <div class="container" data-aos="fade-up">
             <h2 class="section-title">4. Why We Request Google User Data</h2>
-            <p>Salesforce Form Today requests access to Google Forms data only to enable the core functionality of synchronizing form responses into Salesforce.</p>
-            <p>Google user data is accessed strictly for the following purposes:</p>
+            <p>Google data access is limited to:</p>
             <ul class="custom-list list-info">
-                <li>Listing Google Forms owned by the authenticated user</li>
-                <li>Reading form questions and structure</li>
-                <li>Retrieving form responses submitted to selected forms</li>
+                <li>Listing the user's Google Forms</li>
+                <li>Reading form metadata (questions, structure)</li>
+                <li>Retrieving form responses</li>
             </ul>
-            <p>Access to Google data occurs only after explicit user consent and only during user-initiated actions.</p>
+            <p class="mt-3">Access to Google data happens only after the user grants explicit consent during manual, user-initiated actions.</p>
         </div>
     </section>
 
     <section class="content-section">
         <div class="container" data-aos="fade-up">
             <h2 class="section-title">5. Data Usage Transparency</h2>
-            <p>All Google user data accessed by the application is handled with transparency and minimal scope.</p>
             <ul class="custom-list list-check">
-                <li>Google Form data is used only to create or update Salesforce records</li>
-                <li>Data is stored only inside the customer’s Salesforce organization</li>
-                <li>No Google data is stored on external servers or third-party databases</li>
-                <li>No data is used for advertising, analytics, profiling, or tracking</li>
-                <li>Data is never sold or shared with third parties</li>
+                <li>Google Form data is used exclusively to populate Salesforce records</li>
+                <li>No Google data is stored outside of Salesforce</li>
+                <li>Google data is not shared, sold, or used for analytics or advertising</li>
             </ul>
         </div>
     </section>
@@ -174,21 +174,18 @@
     <section class="content-section bg-light">
         <div class="container" data-aos="fade-up">
             <h2 class="section-title text-danger">6. What This App Does Not Do</h2>
-            <p>Salesforce Form Today:</p>
+            <p>Form Today:</p>
             <div class="row">
                 <div class="col-md-6">
                     <ul class="custom-list list-cross">
-                        <li>Does not read Gmail data</li>
-                        <li>Does not access Google Contacts</li>
-                        <li>Does not access Google Calendar</li>
-                        <li>Does not send emails on behalf of the user</li>
+                        <li>Does not read Gmail or Google Contacts</li>
+                        <li>Does not send emails or access Google Photos</li>
                     </ul>
                 </div>
                 <div class="col-md-6">
                     <ul class="custom-list list-cross">
-                        <li>Does not show advertisements</li>
-                        <li>Does not track users</li>
-                        <li>Does not perform background or silent data collection</li>
+                        <li>Does not display ads</li>
+                        <li>Does not perform silent background data collection</li>
                     </ul>
                 </div>
             </div>
@@ -198,29 +195,22 @@
     <section class="content-section">
         <div class="container" data-aos="fade-up">
             <h2 class="section-title">7. User Control and Security</h2>
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul class="custom-list list-check">
-                        <li>Users authenticate using Google OAuth 2.0</li>
-                        <li>Users can revoke Google access at any time from their Google Account settings</li>
-                        <li>Synchronization runs only when manually triggered by the user</li>
-                        <li>Salesforce permission sets and profiles control data visibility</li>
-                        <li>OAuth tokens are securely stored using Salesforce security mechanisms</li>
-                    </ul>
-                </div>
-            </div>
+            <ul class="custom-list list-check">
+                <li>Users authenticate via Google OAuth 2.0</li>
+                <li>OAuth tokens are securely managed within Salesforce using Named Credentials</li>
+                <li>Users can revoke access at any time</li>
+            </ul>
         </div>
     </section>
 
     <section class="content-section bg-light">
         <div class="container" data-aos="fade-up">
             <h2 class="section-title">8. User-Initiated and Controlled Access</h2>
-            <p>Salesforce Form Today does not perform automated background data collection.</p>
+            <p>We prioritize user autonomy and control:</p>
             <ul class="custom-list list-arrow">
-                <li>Synchronization runs only when manually triggered by the user</li>
-                <li>Users can stop synchronization at any time</li>
-                <li>Users can revoke Google access at any time from Google Account security settings</li>
-                <li>Access tokens are managed securely using Salesforce’s Named Credentials and OAuth mechanisms</li>
+                <li>All actions are initiated by the user</li>
+                <li>Data synchronization runs only when triggered by the user from within Salesforce</li>
+                <li>Synchronization only happens when manually triggered by the user</li>
             </ul>
         </div>
     </section>
@@ -228,48 +218,52 @@
     <section class="content-section border-0">
         <div class="container" data-aos="fade-up">
             <h2 class="section-title">9. Intended Users</h2>
-            <p>The application is intended for:</p>
-            <div class="row mb-4">
-                <div class="col-md-4">
+            <p class="lead">This tool is ideal for those who use Google Forms for structured data collection such as:</p>
+            <div class="row mt-4">
+                <div class="col-md-3">
                     <div class="card h-100 p-3 text-center shadow-sm border-0">
                         <div class="card-body">
-                            <i class="fas fa-user-shield fa-2x text-primary mb-3"></i>
-                            <h5 class="card-title">Salesforce Administrators</h5>
+                            <i class="fas fa-poll-h fa-2x text-primary mb-3"></i>
+                            <h5 class="card-title">Surveys</h5>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <div class="card h-100 p-3 text-center shadow-sm border-0">
                         <div class="card-body">
-                            <i class="fas fa-briefcase fa-2x text-primary mb-3"></i>
-                            <h5 class="card-title">Salesforce Business Users</h5>
+                            <i class="fas fa-user-plus fa-2x text-primary mb-3"></i>
+                            <h5 class="card-title">Registrations</h5>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <div class="card h-100 p-3 text-center shadow-sm border-0">
                         <div class="card-body">
-                            <i class="fas fa-building fa-2x text-primary mb-3"></i>
-                            <h5 class="card-title">Organizations</h5>
-                            <small class="text-muted">Using Google Forms for structured data collection</small>
+                            <i class="fas fa-comment-dots fa-2x text-primary mb-3"></i>
+                            <h5 class="card-title">Feedback</h5>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="alert alert-secondary">
-                The app is designed for internal business operations and organizational workflows rather than public or consumer-facing data collection.
+                <div class="col-md-3">
+                    <div class="card h-100 p-3 text-center shadow-sm border-0">
+                        <div class="card-body">
+                            <i class="fas fa-tasks fa-2x text-primary mb-3"></i>
+                            <h5 class="card-title">Internal Requests</h5>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container text-center">
-            <p>&copy; 2026 Salesforce Form Today. All Rights Reserved.</p>
+            <p>&copy; 2026 Form Today. All Rights Reserved.</p>
             <p>
-                <a href="https://salesforceformtoday.twinstack.net/privacy" class="me-3">Privacy Policy</a>
-                <a href="https://salesforceformtoday.twinstack.net/terms">Terms of Service</a>
+                <a href="privacy.html" class="me-3">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
             </p>
-            <p class="small text-muted">Contact: info@twinstack.net</p>
+            <p class="small text-white">Contact: info@twinstack.net</p>
         </div>
     </footer>
 
