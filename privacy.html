@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Salesforce Form Today</title>
+    <title>Privacy Policy - Form Today</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -13,7 +13,15 @@
         h2 { color: #00A1E0; font-size: 1.5rem; margin-bottom: 20px; border-bottom: 2px solid #f1f1f1; padding-bottom: 10px; }
         ul { margin-bottom: 20px; }
         .navbar { background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        .navbar-brand img { height: 90px; margin-right: 10px; }
+        .navbar-brand img { height: 60px; margin-right: 5px; }
+
+        /* Gradient Text for 'Today' */
+        .brand-text { font-size: 1.75rem; font-weight: 800; letter-spacing: -0.5px; }
+        .text-gradient {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 50%, #43e97b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     </style>
 </head>
 <body>
@@ -21,8 +29,10 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="https://res.cloudinary.com/du42kbmmn/image/upload/v1767709840/Untitled_design_9_rydgdm.png" alt="Logo">
-             
+                <img src="https://res.cloudinary.com/du42kbmmn/image/upload/v1767880777/Form_Today_3_xrkl4l.png" alt="Form Today Logo">
+                <span class="brand-text">
+                    <span class="text-dark">Form</span> <span class="text-gradient">Today</span>
+                </span>
             </a>
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav ms-auto">
@@ -45,84 +55,84 @@
         
         <div class="content-section">
             <h2>Overview</h2>
-            <p>Salesforce Form Today is a Salesforce application that allows authorized Salesforce users to connect their Google account, select Google Forms owned by them, and synchronize form responses into Salesforce objects based on user-defined field mappings. This policy explains what data is accessed, how it is used, and how it is protected.</p>
+            <p>Form Today is a Salesforce app that integrates Google Forms with Salesforce. It allows users to authenticate their Google accounts, select forms, and synchronize responses into Salesforce based on mappings defined by the user.</p>
         </div>
 
         <div class="content-section">
             <h2>Data We Access</h2>
-            <p>The application accesses Google data <strong>only after explicit user consent</strong> and only for the following purposes:</p>
+            <p>The app accesses Google data only with explicit user consent for the following:</p>
             <ul>
-                <li>Google Forms metadata (Form name, Form ID)</li>
+                <li>Google Forms metadata (form name, form ID)</li>
                 <li>Google Forms questions and structure</li>
-                <li>Google Forms responses submitted to the selected form</li>
-                <li>Basic Google Drive access limited to locating Forms owned by the user</li>
+                <li>Responses submitted to selected forms</li>
+                <li>Limited Google Drive access to locate user forms</li>
             </ul>
             <div class="alert alert-danger border-0 bg-light text-danger">
-                <strong><i class="fas fa-ban me-2"></i> The application does NOT access:</strong>
-                <ul class="mb-0 mt-2">
-                    <li>Gmail content</li>
-                    <li>Google Contacts</li>
-                    <li>Google Calendar</li>
-                    <li>Google Photos</li>
-                    <li>Any Google data unrelated to Google Forms</li>
-                </ul>
+                <strong>Note:</strong> The app does not access Gmail, Google Contacts, Google Calendar, or Google Photos.
             </div>
         </div>
 
         <div class="content-section">
             <h2>How We Use Data</h2>
-            <p>The accessed data is used <strong>solely</strong> to:</p>
+            <p>The app uses the data exclusively for:</p>
             <ul>
-                <li>Allow users to select their Google Forms</li>
-                <li>Map Google Form questions to Salesforce fields</li>
-                <li>Insert or update Salesforce records using submitted form responses</li>
-                <li>Prevent duplicate processing using unique Google response identifiers</li>
+                <li>Mapping Google Form fields to Salesforce fields</li>
+                <li>Inserting or updating Salesforce records with form responses</li>
+                <li>Preventing duplicate data processing</li>
             </ul>
-            <p><strong>Note:</strong> No data is used for advertising, analytics, profiling, or resale.</p>
         </div>
 
         <div class="content-section">
             <div class="row">
                 <div class="col-md-6">
                     <h2>Data Storage</h2>
-                    <ul>
-                        <li>Google Form response data is stored <strong>only inside the user’s Salesforce organization</strong>.</li>
-                        <li>No Google data is stored outside Salesforce.</li>
-                        <li>No third-party databases or external storage systems are used.</li>
-                    </ul>
+                    <p>Google Form data is stored only in the user’s Salesforce organization, and no data is stored on third-party servers or databases.</p>
                 </div>
                 <div class="col-md-6">
                     <h2>Data Sharing</h2>
-                    <ul>
-                        <li>We <strong>do not share</strong> Google user data with any third party.</li>
-                        <li>Data is visible only to authorized Salesforce users within the same Salesforce organization.</li>
-                        <li>Visibility is governed by Salesforce’s standard object-level and field-level security rules.</li>
-                    </ul>
+                    <p>We do not share data with third parties. Data is visible only to authorized users within the same Salesforce organization, following Salesforce's object-level and field-level security.</p>
                 </div>
             </div>
         </div>
 
         <div class="content-section">
-            <h2>User Control & Security</h2>
-            <p><strong>User Control:</strong> Users can disconnect their Google account, stop synchronization, delete records, or remove OAuth access at any time.</p>
-            <p><strong>Security:</strong> OAuth 2.0 is used for authentication. Named Credentials are used for secure token storage in Salesforce. No tokens are stored outside Salesforce.</p>
+            <h2>User Control</h2>
+            <p>Users can:</p>
+            <ul>
+                <li>Disconnect their Google account at any time</li>
+                <li>Stop synchronization whenever desired</li>
+                <li>Delete synced records via Salesforce automation</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Data Retention</h2>
+            <p>The app adheres to the Salesforce data retention policies set by the customer. Data retention is managed within Salesforce.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Security & Compliance</h2>
+            <p><strong>Security:</strong> The app uses OAuth 2.0 for Google authentication. OAuth tokens are stored securely within Salesforce using Named Credentials.</p>
+            <p class="mt-3"><strong>Compliance:</strong> Form Today complies with:</p>
+            <ul>
+                <li>Google API Services User Data Policy</li>
+                <li>OAuth 2.0 security standards</li>
+                <li>Salesforce’s security and access control standards</li>
+            </ul>
         </div>
 
         <div class="content-section">
             <h2>Contact</h2>
-            <p>If you have questions about this Privacy Policy, please contact:</p>
+            <p>For questions regarding this Privacy Policy, contact us at:</p>
             <p><i class="fas fa-envelope me-2"></i> <strong>Email:</strong> info@twinstack.net</p>
         </div>
 
     </div>
 
-    <footer class="text-center py-4 text-muted bg-white border-top">
-        <small>&copy; 2026 Salesforce Form Today. All Rights Reserved.</small>
+    <footer class="text-center py-4 text-white bg-dark border-top">
+        <small>&copy; 2026 Form Today. All Rights Reserved.</small>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
-
-
