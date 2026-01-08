@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service - Salesforce Form Today</title>
+    <title>Terms of Service - Form Today</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -12,7 +12,15 @@
         .legal-content { max-width: 800px; margin: 0 auto; background: #fff; padding: 50px; border-radius: 5px; box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
         h3 { font-size: 1.25rem; font-weight: bold; margin-top: 30px; margin-bottom: 15px; color: #2c3e50; }
         .navbar { background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        .navbar-brand img { height: 90px; margin-right: 10px; }
+        .navbar-brand img { height: 60px; margin-right: 5px; }
+
+        /* Gradient Text for 'Today' */
+        .brand-text { font-size: 1.75rem; font-weight: 800; letter-spacing: -0.5px; }
+        .text-gradient {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 50%, #43e97b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     </style>
 </head>
 <body>
@@ -20,8 +28,10 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="https://res.cloudinary.com/du42kbmmn/image/upload/v1767709840/Untitled_design_9_rydgdm.png" alt="Logo">
-             
+                <img src="https://res.cloudinary.com/du42kbmmn/image/upload/v1767880777/Form_Today_3_xrkl4l.png" alt="Form Today Logo">
+                <span class="brand-text">
+                    <span class="text-dark">Form</span> <span class="text-gradient">Today</span>
+                </span>
             </a>
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav ms-auto">
@@ -44,58 +54,59 @@
         <div class="legal-content">
             
             <h3>1. Acceptance of Terms</h3>
-            <p>By using Salesforce Form Today, you agree to these Terms of Service. If you do not agree, do not use the application.</p>
+            <p>By using Form Today, you agree to these Terms of Service. If you do not agree, please refrain from using the app.</p>
 
             <h3>2. Description of Service</h3>
-            <p>Salesforce Form Today enables Salesforce users to authenticate with a Google account, select Google Forms owned by that account, map form questions to Salesforce object fields, and synchronize form responses into Salesforce records.</p>
+            <p>Form Today integrates Google Forms with Salesforce, allowing users to:</p>
+            <ul>
+                <li>Authenticate their Google account</li>
+                <li>Select and view Google Forms</li>
+                <li>Map Google Form fields to Salesforce fields</li>
+                <li>Sync form responses into Salesforce</li>
+            </ul>
 
             <h3>3. User Responsibilities</h3>
             <p>Users are responsible for:</p>
             <ul>
-                <li>Having legal rights to access the Google Forms they connect.</li>
-                <li>Ensuring compliance with their organization’s data policies.</li>
-                <li>Managing Salesforce permissions and data visibility.</li>
-                <li>Maintaining data accuracy and validation rules in Salesforce.</li>
+                <li>Ensuring they have legal rights to access the Google Forms they use</li>
+                <li>Complying with organizational data policies</li>
+                <li>Managing Salesforce permissions and data visibility</li>
             </ul>
 
             <h3>4. Data Ownership</h3>
-            <p>Users retain full ownership of their Google Form data and Salesforce data created by the application. The application does not claim ownership over any data.</p>
+            <p>Users retain full ownership of both their Google Form data and Salesforce data created by the app. The app does not claim ownership over any data.</p>
 
             <h3>5. Prohibited Use</h3>
-            <p>Users may not use the application to:</p>
+            <p>Users may not:</p>
             <ul>
-                <li>Access Google data without proper authorization.</li>
-                <li>Sync data from forms they do not own or control.</li>
-                <li>Violate privacy laws or organizational policies.</li>
-                <li>Attempt to bypass Salesforce or Google security controls.</li>
+                <li>Access Google data without authorization</li>
+                <li>Sync data from forms they do not own</li>
+                <li>Violate privacy laws or policies</li>
             </ul>
 
             <h3>6. Service Availability</h3>
-            <p>The application depends on Google APIs and Salesforce platform availability. We do not guarantee uninterrupted service.</p>
+            <p>The app depends on Google APIs and the Salesforce platform, and service interruptions are not guaranteed.</p>
 
             <h3>7. Limitation of Liability</h3>
-            <p>Salesforce Form Today is provided “as is.” The developer is not liable for data loss, API changes, or third-party service interruptions.</p>
+            <p>Form Today is provided "as is." The developer is not liable for data loss, API changes, or third-party service interruptions.</p>
 
             <h3>8. Changes to Terms</h3>
-            <p>Terms may be updated to reflect regulatory or platform changes. Continued use implies acceptance of updated terms.</p>
+            <p>The terms may be updated based on regulatory or platform changes. Continued use signifies acceptance of updated terms.</p>
 
             <hr class="my-5">
 
             <div class="text-center">
                 <p><strong>Contact Us</strong></p>
-                <p>Email: info@twinstack.net</p>
+                <p>For inquiries, contact us at: Email : info@twinstack.net</p>
             </div>
 
         </div>
     </div>
 
-    <footer class="text-center py-4 text-muted bg-white border-top">
-        <small>&copy; 2026 Salesforce Form Today. All Rights Reserved.</small>
+    <footer class="text-center py-4 text-white bg-dark border-top">
+        <small>&copy; 2026 Form Today. All Rights Reserved.</small>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
-
-
